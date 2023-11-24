@@ -295,21 +295,69 @@
 <!--        </div>-->
 <!--    </section>-->
 <!--    -->
-<!--    <section class="hero is-small">-->
-<!--        <div class="hero-body">-->
-<!--            <div class="container is-max-desktop">-->
-<!--                <h2 class="title is-3">Dreambooth</h2>-->
-<!--                <h2>PIXART-&alpha; can be combined with Dreambooth. Given a few images and text prompts,-->
-<!--                    PIXART-&alpha; can generate high-fidelity images, that exhibit natural interactions with the-->
-<!--                    environment, precise modification of the object colors, demonstrating that PIXART-&alpha; can-->
-<!--                    generate images with exceptional quality, and has a strong capability in customized extension.-->
-<!--                </h2>-->
-<!--                <img loading="lazy" src="static/images/dreambooth/dreambooth_dog.svg" alt="dog" />-->
-<!--                <img loading="lazy" src="static/images/dreambooth/dreambooth_m5.svg" alt="Wenjie M5" />-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-<!---->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">Algorithm: ParaDiffusion</h2>
+                <h2>The training pipeline of ParaDiffusion mainly includes three stages:
+                    1) Stage-1 for pretraining is based
+                    on 0.3 billion samples to acquire general text-image knowledge.
+                    
+                    2) Stage-2 employ millions of data to simultaneously fine-tune LLM and
+                    the diffusion model for Paragraph-Image Alignment.
+                    
+                    3) Quality tuning with curated high-quality annotated data (i.e., ParaImage-Small).
+                </h2>
+                <img loading="lazy" src="static/images/pipeline.png" alt="dog" />
+<!--                <img loading="lazy" src="static/images/pipeline.png" alt="Wenjie M5" />-->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">Dataset: ParaImage</h2>
+                <h2>The proposed ParaImage dataset mainly includes two parts:
+                    
+                    (a) High-quality images with generative captions (ParaImage-Big) are primarily
+                    employed for the paragraph-image alignment learning in Stage 2.
+                    
+                    (b) Aesthetic images with manual long-term description (ParaImage-
+                    Small) are primarily used for quality-tuning in Stage 3.
+                    
+                    The ParaImage-Small can be download from Google Drive(keep stay tuned)
+                </h2>
+                <img loading="lazy" src="static/images/WX20231124-194745@2x.png" alt="dog" />
+<!--                <img loading="lazy" src="static/images/pipeline.png" alt="Wenjie M5" />-->
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3">New Eval Prompts: ParaPrompts-400</h2>
+                <h2>The current test prompts focus on short text-to-image
+                    generation, ignoring the evaluation for paragraph-to-image
+                    generation, we introduced a new evaluation set of prompts
+                    called ParaPrompts, including 400 long-text descriptions.
+                    
+                    The previous prompts testing was mostly concentrated
+                    on text alignments within the range of 0-25 words,
+                    while our prompts extend to long-text alignments of 100
+                    words or more.
+                    
+                </h2>
+                <img loading="lazy" src="static/images/WX20231124-195321@2x.png" alt="dog" />
+<!--                <img loading="lazy" src="static/images/pipeline.png" alt="Wenjie M5" />-->
+            </div>
+        </div>
+    </section>
+    
+    
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
@@ -346,6 +394,9 @@
                         </div>
                     </div>
                 </div>
+                
+                
+                
 <!--                <div class="columns is-centered has-text-centered">-->
 <!--                    <div class="column">-->
 <!--                        <div id="modal-sample3" class="modal">-->
